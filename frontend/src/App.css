@@ -1,0 +1,175 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Landing Page ===== */
+.landingPageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* ===== Navbar ===== */
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+
+/* ===== Main Landing Content ===== */
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  min-height: 80vh;
+  align-items: center;
+  gap: 2rem;
+}
+
+.landingMainContainer > div:nth-child(1) {
+  font-size: 2.2rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] {
+  background: #D97500;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  max-height: 70vh;
+  max-width: 100%;
+}
+
+/* ===== NavBar ===== */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  text-align: center;
+}
+
+/* ===== Meet Page ===== */
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  min-height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* ========================= */
+/* ===== RESPONSIVE CSS ==== */
+/* ========================= */
+
+/* 📱 Mobile Devices */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .landingPageContainer nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .landingPageContainer nav .navlist {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Landing Section */
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 1.5rem;
+    min-height: auto;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.6rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"] {
+    margin-inline: auto;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    width: 80%;
+    max-height: none;
+  }
+
+  /* Meet Page */
+  .meetContainer {
+    flex-direction: column;
+    min-height: auto;
+    gap: 2rem;
+    padding-block: 2rem;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .rightPanel > img {
+    width: 80%;
+  }
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+  .landingMainContainer {
+    padding-inline: 2rem;
+  }
+
+  .rightPanel > img {
+    width: 40vw;
+  }
+}
